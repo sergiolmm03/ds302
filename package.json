@@ -4,6 +4,7 @@
   "description": "Aula de ds 302 com heroku e github",
   "main": "base.js",
   "scripts": {
+    "start": "node base.js",  
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
