@@ -13,5 +13,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Aula de ds 302 com heroku e github",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiolmm03/ds302.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sergiolmm03/ds302/issues"
+  },
+  "homepage": "https://github.com/sergiolmm03/ds302#readme"
 }
