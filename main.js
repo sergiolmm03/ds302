@@ -71,11 +71,9 @@ app.get('/api', (req, res) => {
   });
 
 app.post('/api', (req, res) => {
-    console.log(request.body.key);
-    console.log(request.body.value);
-    key = request.body.key;
-    value = request.body.value;
-    
+    console.log('Got body:', req.body);
+    key = req.body.key;
+    value = req.body.password;
     res.status(200).send({
       success: 'true',
       message: 'Teste do post heruko' + key + ' - '+ value,
@@ -83,4 +81,20 @@ app.post('/api', (req, res) => {
     });
   });
 
+app.delete('/api', (req, res) => {
+    console.log('Got body:', req.body);
+    key = req.body.key;
+    value = req.body.password;
+    res.status(200).send({
+      success: 'true',
+      message: 'Teste do DELETE heruko - ' + key + ' - '+ value,
+      version: '1.0.0',
+    });
+  });  
+
+
 app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
+
+//curl -d "key=scott&password=secret" -X POST http://localhost:3000/api
+//curl -d "key=scott&password=secret" -X PUT http://localhost:3000/api
+//curl -d "key=scott&password=secret2" -X DELETE http://localhost:3000/api
