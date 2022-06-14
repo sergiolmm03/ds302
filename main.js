@@ -71,9 +71,14 @@ app.get('/api', (req, res) => {
   });
 
 app.post('/api', (req, res) => {
+    console.log(request.body.key);
+    console.log(request.body.value);
+    key = request.body.key;
+    value = request.body.value;
+    
     res.status(200).send({
       success: 'true',
-      message: 'Teste do post heruko',
+      message: 'Teste do post heruko' + key + ' - '+ value,
       version: '1.0.0',
     });
   });
