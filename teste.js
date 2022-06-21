@@ -24,7 +24,7 @@ async function selectData(res1) {
 
 async function selectData2(res1,id) {
     try {
-      const res = await pool.query('SELECT * FROM Users where firstname =  $1', [id], (err, res) => {
+      const res = await pool.query('SELECT * FROM Users where firstname = $1', [id], (err, res) => {
           if (err) {
               console.log("Error - Failed to select all from Users");
               console.log(err);

@@ -32,12 +32,12 @@ app.use(express.urlencoded());
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
-//http://localhost:3000/url?id=1
+//http://localhost:3000/url?id=James
 app.get('/url', function(req, res) {
   possue = false;  
   if (Object.keys(req.query).length === 0)
      possue = true;
-  const Id = parseInt(req.query.id);    
+  const Id = req.query.id;    
   console.log(Id);
   console.log(possue);
   //const url = req.body.url
@@ -73,7 +73,7 @@ app.get('/api', (req, res) => {
 app.post('/api', (req, res) => {
     console.log('Got body:', req.body);
     key = req.body.tentativa;
-    value = req.body.valor;
+    value = req.body.valor
     res.status(200).send({
       success: 'true',
       message: 'Teste do post heruko' + key + ' - '+ value,
