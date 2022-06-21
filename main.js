@@ -32,6 +32,9 @@ app.use(express.urlencoded());
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
+app.get('/foto', function(req, res) {
+  res.sendFile(path.join(__dirname + '/foto.jpeg'));
+});
 //http://localhost:3000/url?id=James
 app.get('/url', function(req, res) {
   possue = false;  
