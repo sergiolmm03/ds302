@@ -3,7 +3,7 @@ const { pool } = require("./db");
 
 async function selectData(res1) {
   try {
-    const res = await pool.query(`SELECT * FROM Users;`, (err, res) => {
+    const res = await pool.query(`SELECT firstname FROM Users;`, (err, res) => {
         if (err) {
             console.log("Error - Failed to select all from Users");
             console.log(err);
@@ -24,7 +24,7 @@ async function selectData(res1) {
 
 async function selectData2(res1,id) {
     try {
-      const res = await pool.query('SELECT * FROM Users where id =  $1', [id], (err, res) => {
+      const res = await pool.query('SELECT * FROM Users where firstname =  $1', [id], (err, res) => {
           if (err) {
               console.log("Error - Failed to select all from Users");
               console.log(err);

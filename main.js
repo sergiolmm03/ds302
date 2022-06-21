@@ -72,8 +72,8 @@ app.get('/api', (req, res) => {
 
 app.post('/api', (req, res) => {
     console.log('Got body:', req.body);
-    key = req.body.key;
-    value = req.body.password;
+    key = req.body.tentativa;
+    value = req.body.valor;
     res.status(200).send({
       success: 'true',
       message: 'Teste do post heruko' + key + ' - '+ value,
